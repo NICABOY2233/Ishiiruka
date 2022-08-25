@@ -126,7 +126,7 @@ jobs:
             artifact_name: linux-playback
             build_config: playback
     name: "Ubuntu ${{ matrix.build_type }}"
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     steps:
       - name: "Checkout"
         uses: actions/checkout@v2
@@ -227,7 +227,7 @@ jobs:
             artifact_name: macOS-playback
             build_config: playback
     name: "macOS ${{ matrix.build_type }}"
-    runs-on: macos-10.15
+    runs-on: macos-11
     steps:
       - name: "Checkout"
         uses: actions/checkout@v2
@@ -260,7 +260,6 @@ jobs:
           brew install \
           ffmpeg@2.8 \
           libpng \
-          libav \
           pkgconfig \
           libao \
           sound-touch \
